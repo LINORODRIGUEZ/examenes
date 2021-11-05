@@ -16,6 +16,37 @@
 				
 			}
 		}
+	
+		public function asignar (){
+			objSesiones()->verificarSesion("docente");
+			
+			if ($_SERVER["REQUEST_METHOD"] == "POST") {
+				
+				$idExamen = test_input($_POST["idExamen"]);
+			
+				
+				
+				if( empty($idExamen) || !isset ($_POST["alumnos"]) )
+				{
+					header("Location: /examen/lista");
+					exit();
+				}
+
+				$alumnoModel = new AlumnoModel();
+				$alumnoModel-> asignar ($idExamen, $_POST["alumnos"]);
+
+				
+				header("Location: /examen/alumnos/$idExamen");
+				
+				 }else{
+					header("Location: /examen/lista");
+						exit();
+					}
+		}
+		
+
+
+
 		public function buscar(){
 			
 			objSesiones()->verificarSesion("docente");
@@ -34,6 +65,9 @@
 				
 				$alumnoModel = new AlumnoModel();
 				$alumnos = $alumnoModel->buscar($generacion,$idExamen);
+				//for ( $i=0  $i < count ($alumnos) ; $i++ ) {
+					//$alumnos[$i] ["no"] - $i + 1; 
+				//}
 
 				$mensaje="";
 				

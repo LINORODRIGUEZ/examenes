@@ -8,6 +8,8 @@
 </form>
 
 <h2> RESULTADO DE LA BUSQUEDA </h2>
+<form action ="/alumno/asignar"  method="post" >
+
 <table>
 	<tr>
 		<th><center>ID.</center></th>
@@ -20,13 +22,17 @@
 		<td><center>{id}</center></td>
 		<td><center>{usuario}</center></td>
 		<td><center>{nombre}</center></td>
-		<th>
-			<center>
+		<td>
+			<!--<center>
 				<a href="#">activar </a> /
 				<a href="#">desactivar</a> 
-			</center>
-		</th>
+			</center>-->
+			<input type= "checkbox" name="{idExamen}_{id}" value ="1" />
+		</td>
 	</tr>
 	<!--LISTA_ALUMNOS-->
 </table>
+
+<input type ="submit" name="guardar" value ="Guardar" />
+</form>
 <a href="/examen/lista" class="btn btn-dark" > Listar examenes </a>

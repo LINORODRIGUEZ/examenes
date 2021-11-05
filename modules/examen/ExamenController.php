@@ -28,6 +28,10 @@
 			$examenModel = new ExamenModel();
 			$datosExamen= $examenModel->darExamenn($idExamen);
 			$alumnos = $examenModel->alumnos($idExamen);
+
+			//		//$alumnos[$i] ["no"] - $i + 1; 
+				//}for ( $i=0  $i < count ($alumnos) ; $i++ ) {
+			
 			
 			$datos=array(
 			"titulo" =>"Alumnos asignados al Examen" . $datosExamen[0]["nombre"],["id"],

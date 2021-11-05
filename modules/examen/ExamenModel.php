@@ -15,7 +15,7 @@
 			$registros = $conn->query($sql) or die ("Error mostrar preguntas: " . $conn->error);
 			
 			$alumnos = array();
-			while($asignados[] = $registros->fetch_assoc());
+			while($alumnos[] = $registros->fetch_assoc());
 			
 			array_pop($alumnos);
 			
