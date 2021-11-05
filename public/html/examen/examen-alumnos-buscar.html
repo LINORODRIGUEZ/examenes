@@ -1,0 +1,32 @@
+<h2> BUSCAR  A LOS ALUMNOS </h2>
+    <form action ="/alumno/buscar"  method="post" >
+	<input type="hidden" name ="idExamen" value ="{idExamen}"/> <br>
+	
+	Generación:
+	<input type="number" name ="generacion" min="15" /> 	
+	<input type="submit" name ="buscar" value ="BUSCAR"/> <br>
+</form>
+
+<h2> RESULTADO DE LA BUSQUEDA </h2>
+<table>
+	<tr>
+		<th><center>ID.</center></th>
+		<th><center>MATRICULA</center></th>
+		<th><center>NOMBRE</center></th>
+		<th><center>ACCIONES</center></th>
+	</tr>
+	<!--LISTA_ALUMNOS-->
+	<tr>
+		<td><center>{id}</center></td>
+		<td><center>{usuario}</center></td>
+		<td><center>{nombre}</center></td>
+		<th>
+			<center>
+				<a href="#">activar </a> /
+				<a href="#">desactivar</a> 
+			</center>
+		</th>
+	</tr>
+	<!--LISTA_ALUMNOS-->
+</table>
+<a href="/examen/lista" class="btn btn-dark" > Listar examenes </a>

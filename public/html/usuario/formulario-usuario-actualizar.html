@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset ="utf-8" />
+		<style>	
+			.error{
+			color:red;
+			}
+		</style>
+		
+	</head>
+	<p><center> {mensaje}</center></p>
+	<body>
+
+		<form action="/usuario/editar" method="post" >
+				<p><span class="error">* Para la actualización debes llenar todos los campos*</span></p>					  
+				
+				<label>
+					USUARIO CON ID A ACTUALIZAR:
+				</label>
+				<input type="text" readonly name="id" value="{id}"  style="width : 25px; heigth : 25px" />
+				<br></br>
+				
+				Nombre(s): 		 
+				<input type="text" name="nombre" value="{nombre}" style="width :200px; heigth : 150px" />
+				</br></br>
+				
+				Usuario: 		  
+				<input type="text" name="usuario" value="{usuario}" placeholder="matricula o sobre nombre"/>
+				</br></br>
+				
+				Password: 		  
+				<input type="text" name="password" value="{password}" style="width :  530px; heigth : 400px"  />
+				</br></br>
+				
+				Tipo de Usuario: 
+				<label>
+					<input type="radio" name="tipo" value="alumno" {alumno} /> Alumno 
+				</label>
+				
+				<label>
+					<input type="radio" name="tipo" value="docente" {docente} /> Docente 
+				</label>
+				
+				<label>
+					<input type="radio" name="tipo" value="administrador" {administrador} /> Administrador
+				</label>
+				<span class="spinner-grow spinner-grow-sm"></span>
+				</br></br>
+			
+			
+				<input type="submit" name="btn" value="Actualizar" class="btn btn-success"/>
+		
+				<a href="/usuario/lista" class="btn btn-success" > Cancelar </a>
+					
+			</center>
+		</form>
+	</body>
+</html>

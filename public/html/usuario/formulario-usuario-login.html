@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<title>Login</title>
+	
+	<div >
+	<h1 >SISTEMA DE EXAMENES EN LA <br>
+	UNIVERSIDAD POLITÉCNICA DE ATLACOMULCO</h1>	
+	</div>
+	<style>
+	
+	
+	</style>
+
+	<body>
+		
+		<form action="/usuario/ingresar" method="post"  >
+			
+				<p><span class="identify">* Escribe tus credenciales SIN espacios *</span></p>
+				
+				Usuario:<br>
+				<span class="input-group login-userinput" class="input-group-addon"><span class="glyphicon glyphicon-user"></span>
+				<input type="text" name="usua_usuario" placeholder="Usuario"/> </span></br>
+					
+				Contraseña:<br>
+				<span class="glyphicon glyphicon-lock"></span>
+				<input type="password"  name="usua_password" placeholder="Password"/></br></br>
+						
+				<input type="submit" name="ACEPTAR" value="INGRESAR" class="btn btn-warning"  />
+						
+				
+						
+				<br><br>
+				<p><span class="succes"> Cuentas con una cuenta | Ingresar | Registrarse </span ></p> 
+				<br>
+				<a href="/usuario/crear" class="btn btn-success"> REGISTRARSE </a>
+				</br></br>
+				<p><span class="error2" >{error}</span></p>
+				
+			</form>
+	</form>
+</body >
+</html>												

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	
+	<style>
+		
+	</style>
+	<body >
+		<table > 
+			<tr>
+				<th><center> ID </center> </th>
+				<th><center> NOMBRE </center></th>
+				<th><center> ID DE DOCENTE ACTIVO </center></th>
+				<th><center> ESTADO </center></th> 
+				<th><center> NO° DE PREGUNTAS </center></th>
+				<th colspan="3"><center> ACCIONES </center></th>
+				
+				</tr>
+			<tr>
+				<!--LISTA_EXAMENES-->
+				<td><center> {id} </center></td>
+				<td><center> {nombre} </center></td>
+				<td><center> {docente} </center> </td>
+				<td><center> {estado} </center></td>
+				<td><center> {no_preguntas} </center> </td>
+				<th>
+				
+				<a href="/examen/actualizar/{id}"> Actualizar</a> | 
+				<a href="/examen/eliminar/{id}"> Eliminar</a> |
+				<a href="/examen/preguntas/{id}">Preguntas </a> |
+				<a href="/examen/alumnos/{id}">Alumnos </a>
+			</th>
+		</tr>
+		<!--LISTA_EXAMENES-->
+	</table>
+	<br>
+	
+	<a href="/examen/crear" >REGRESAR</a>    |
+	
+	<a href="/usuario/salir"  > ENTRAR </a>
+	
+	</body>
+</html>

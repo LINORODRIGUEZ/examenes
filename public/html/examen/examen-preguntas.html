@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	
+	<style>
+		
+		
+	</style>
+	<body id="contenedor1">
+		<hr>
+		<h3>Crear una Pregunta</h3>
+		<form action="/pregunta/guardar" method = "post">
+		
+		<input type="hidden" name ="idExamen" value ="{idExamen}"/> <br>
+		
+		Pregunta:
+		<input type="text" name ="cuestion"/> <br>
+		
+		Respuesta 1:
+		<input type="text" name ="opcion1"/> <br>
+		
+		Respuesta 2:
+		<input type="text" name ="opcion2"/> <br>
+		
+		Respuesta 3:
+		<input type="text" name ="opcion3"/> <br>
+	
+		Respuesta 3:
+		<input type="text" name ="opcion4"/> <br>
+		
+		Correcta:
+		<input type="number" name ="correcta" min="1" max ="4" /> <br></br>
+		
+		<input type="submit" name ="guardar" value ="GUARDAR" min="1" max ="4" class="btn btn-info"/> <br>
+		</form>
+		
+		<h3><center>Lista de Preguntas</center></h3>
+		<table> 
+			<tr>
+				<th><center> ID </center> </th>
+				<th><center> CUESTION </center></th>
+				<th><center> OPCION 1 </center></th>
+				<th><center> OPCION 2 </center></th>
+				<th><center> OPCION 3 </center></th>
+				<th><center> OPCION 4 </center></th> 
+				<th><center> CORRECTA </center></th>
+				<th><center> ACCION </center></th>
+				</tr>
+			<tr>
+				<!--LISTA_PREGUNTAS-->
+				<td><center> {id} </center></td>
+				<td><center> {cuestion} </center></td>
+				<td><center> {opcion1} </center> </td>
+				<td><center> {opcion2} </center></td>
+				<td><center> {opcion3} </center> </td>
+				<td><center> {opcion4} </center> </td>
+				<td><center> {correcta} </center> </td>
+				<th>
+				<center><a href="/pregunta/eliminar/{id}"> eliminar pregunta </a></center>
+			</th>
+		</tr>
+		<!--LISTA_PREGUNTAS-->
+	</table>
+
+	
+	<a href="/examen/lista"  class="btn btn-primary"> REGRESAR</a>  |
+	
+	<a href="/usuario/salir"  class="btn btn-warning" > ENTRAR </a>
+	
+	</body>
+</html>

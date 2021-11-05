@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset ="utf-8" />
+		<style>
+		
+		</style>
+	</head>
+		<table class="table">
+		<thead class="thead-dark">
+			<tr>
+				<th><center> ID </center></th>
+				<th><center> NOMBRE </center></th>
+				<th><center> USUARIO </center></th>
+				<th><center> TIPO </center></th>
+				<th><center> ESTADO </center></th>
+				<th><center> ACCIONES </center></th>
+			</tr>
+			</thead>
+			<tr>
+				
+				<!--LISTA_USUARIOS-->
+				<th scope="row"> <center>{id} </center></th>
+				<td><center>{nombre}</center> </td>
+				<td><center> {usuario} </center> </td>
+				<td><center> {tipo} </center></td>
+				<td><center><a href="/usuario/activar/{id}/{estado}" >{simbolo}</a></center></td>
+				
+				<th>
+				<center> <a href="/usuario/actualizar/{id}"> actualizar</a> / 
+					<a href="/usuario/eliminar/{id}"> eliminar </a> /
+					<a href="/usuario/restablecer/{id}"> restablecer</a> </center>
+				</th>
+			</tr>
+			<!--LISTA_USUARIOS-->
+		</table>
+		<br>
+		
+		<a href="/usuario/crear" class="btn btn-success"> CREAR USAURIO NUEVO </a>     |
+		
+		<a href="/usuario/salir" class="btn btn-warning"> SALIR </a>   |
+		
+	
+	</body>
+</html>

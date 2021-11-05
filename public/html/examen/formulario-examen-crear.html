@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset ="utf-8" />
+
+		<style>
+		
+		</style>
+	</head>
+	
+	<body>
+		
+		<form action="/examen/guardar" method="post">
+		
+				<label>
+					CREAR EXAMEN 
+			</label>
+				
+				<input type="text" hidden name="exam_docente" value="{exam_docente}" style="width : 25px; heigth : 25px"  />
+				<br></br>
+				
+				Nombre del exámen a crear:<br> 
+				<input type="text" name="nombre" />
+				<br></br>
+				
+				Numero de preguntas:<br> 
+				<input type="number" name="no_preguntas" min="1" max="999"/>
+				<br></br>
+				
+				
+				
+				<input type="submit" name="Guardar" value="Guardar" class="btn btn-light" /> |
+				<a href="/examen/lista" class="btn btn-dark" > Mostrar Examenes </a>  |
+				<a href="/" class="btn btn-warning" > ENTRAR </a> |
+		
+			
+		</body>
+	</form>
+	</html>
